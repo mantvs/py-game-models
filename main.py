@@ -18,7 +18,7 @@ def main() -> None:
             Skill.objects.get_or_create(
                 name=skill.get("name"),
                 defaults={
-                    "bonus": skill["bonus"],
+                    "bonus": skill.get("bonus"),
                     "race": race
                 }
             )
